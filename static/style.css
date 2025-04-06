@@ -1,0 +1,171 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navbar */
+.navbar {
+    width: 100%;
+    background-color: #2e7d32;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 10px 16px;
+    border-radius: 6px;
+    background-color: transparent;
+    transition: all 0.3s ease;
+    position: relative;
+    top: 0;
+    box-shadow: none;
+}
+
+/* Hover effect: like a white button */
+.nav-links li a:hover {
+    background-color: white;
+    color: #2e7d32;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+/* Click/Active effect */
+.nav-links li a:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Body */
+body {
+    /* padding-top: 80px; Adjusted to compensate for the fixed navbar */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f0f4f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    flex-direction: column;
+}
+
+/* Container for the form */
+.container {
+    background: white;
+    padding: 40px 50px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+    margin-top: 20px; /* Add some space between navbar and content */
+    box-sizing: border-box;
+}
+
+/* Heading */
+h2 {
+    margin-bottom: 20px;
+    color: #2e7d32;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+/* File input */
+input[type="file"] {
+    display: block;
+    margin: 20px auto;
+    padding: 10px;
+    border: 2px solid #2e7d32;
+    border-radius: 8px;
+    background: #f0f4f8;
+    font-size: 16px;
+}
+
+/* Button */
+button {
+    background-color: #2e7d32;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #1b5e20;
+    transform: scale(1.05);
+}
+html {
+    scroll-behavior: smooth;
+}
+
+/* Footer */
+.footer {
+    background-color: #2e7d32;
+    color: white;
+    text-align: center;
+    padding: 16px 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    font-size: 14px;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.footer-container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 768px) {
+    .nav-links {
+        gap: 15px;
+    }
+
+    .container {
+        padding: 30px 25px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    button {
+        padding: 10px 20px;
+    }
+}

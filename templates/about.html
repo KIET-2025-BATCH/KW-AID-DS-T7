@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About | PlantCare</title>
+    <link rel="stylesheet" href="../static/about.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">PlantCare</div>
+            <ul class="nav-links">
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('about')}}">About</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div class="about-container">
+        <h2>About Plant Disease Prediction</h2>
+        <p>
+            Our project focuses on developing an intelligent and user-friendly system to detect plant diseases through leaf images. It uses the power of deep learning and computer vision to analyze image features like color, texture, and shape, enabling early diagnosis of plant health issues.
+        </p>
+        <p>
+            Timely identification of plant diseases is crucial for farmers and agricultural experts. Manual diagnosis can be slow, error-prone, and requires domain expertise. Our AI-driven tool automates this process, delivering fast and accurate results without the need for physical inspections.
+        </p>
+        <p>
+            The underlying model has been trained on a diverse dataset containing thousands of healthy and diseased plant leaves from various crops. By uploading a simple leaf photo, users receive instant predictions about the plant's health status, along with disease type if detected.
+        </p>
+        <p>
+            This system empowers farmers with real-time information, reduces dependency on external consultants, and allows for early intervention. Ultimately, this helps reduce crop loss, optimize the use of fertilizers and pesticides, and improve overall farm productivity.
+        </p>
+        <p>
+            Our mission is to bridge the gap between modern AI technology and traditional farming practices, making advanced plant care accessible and scalable for everyone—from small-scale farmers to large agricultural enterprises.
+        </p>
+    </div>
+    
+    <div class="team-section">
+        <h2>Meet the Team</h2>
+        <div class="team-cards">
+            {% for member in [
+                {"name": "Tillapudi", "role": "Project Lead and Model Developer", "github": "https://github.com/SOWJANYATILLAPUDI", "linkedin": "https://www.linkedin.com/in/sowjanya-tillapudi-19005623b/"},
+                {"name": "Chikkala Surya Lakshmi", "role": "Backend Developer", "github": "https://github.com/2004-surya", "linkedin": "https://www.linkedin.com/in/suryalakshmi-chikkala-43764923b"},
+                {"name": "Selamsetti Vaishnavi Kalyani", "role": "Backend Developer", "github": "https://github.com/Kalyani1327", "linkedin": "https://www.linkedin.com/in/kalyani-seelamsetti-63038a23b"},
+                {"name": "Chelamkuri Sowrabhya Bhanu", "role": "Frontend Developer", "github": "https://github.com/Sowrabhya", "linkedin": "https://www.linkedin.com/in/chelamkuri-sowrabhya-bhanu-104019269"},
+                {"name": "Palepu Satya Sravani", "role": "Frontend Developer", "github": "https://github.com/Satyasravanip", "linkedin": "https://www.linkedin.com/in/satya-sravani-palepu-a34672307"}
+            ] %}
+            <div class="card">
+                <h3>{{ member.name }}</h3>
+                <p>{{ member.role }}</p>
+                <div class="social-links">
+                    <a href="{{ member.github }}" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="{{ member.linkedin }}" target="_blank"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <p>&copy; 2025 All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
